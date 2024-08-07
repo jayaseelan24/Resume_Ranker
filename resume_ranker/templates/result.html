@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Ranking Results</title>
+    <link rel="stylesheet" href="result.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<div class="container">
+    <h1>Resume Ranking Results</h1>
+
+    <div class="result">
+        {% if ranked_resumes %}
+            {% for resume in ranked_resumes %}
+                <div class="resume">
+                    <h3>{{ resume[0].filename }}</h3>
+                    <p>Matching Percentage: <span class="matching-percentage">{{ resume[1] }}%</span></p>
+                    <p class="summary">{{ resume[2] }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No resumes ranked yet.</p>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>

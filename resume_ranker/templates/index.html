@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Ranker</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<div class="container">
+    <h1>Resume Ranker</h1>
+    <form action="/rank" method="post" enctype="multipart/form-data">
+        <label for="job_description">Job Description:</label>
+        <input type="file" name="job_description" id="job_description" accept=".docx" required>
+        <label for="resumes">Resumes:</label>
+        <input type="file" name="resumes" id="resumes" accept=".docx" multiple required>
+        <button type="submit">Rank Resumes</button>
+    </form>
+</div>
+
+</body>
+</html>
